@@ -1,8 +1,5 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import WeatherForecast from "./components/WeatherForecast/WeatherForcast";
+import WeatherForecast from "./components/WeatherForecast/WeatherForecast.jsx";
 
 const weatherForecasts = [
 	{
@@ -48,7 +45,7 @@ const App = () => {
 			<h1>Local Weather</h1>
 			<section>
 				{weatherForecasts.map((forecast, index) => (
-					<WeatherForecast key={index} {...forecast} />
+					<WeatherForecast key={index} forecast={forecast} />
 				))}
 			</section>
 		</>
